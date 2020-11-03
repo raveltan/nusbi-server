@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="015de4ed-a3f1-4bc8-936c-059540607e24" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1jlOQhDjRWnUw8DURqWhQZxbPvj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/database" />
+      <recent name="$PROJECT_DIR$/auth" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="498" y="314" width="500" height="413" key="#Go_Modules" timestamp="1604375298812">
+      <screen x="0" y="27" width="1500" height="973" />
+    </state>
+    <state x="498" y="314" width="500" height="413" key="#Go_Modules/0.27.1500.973@0.27.1500.973" timestamp="1604375298812" />
+    <state x="1" y="339" width="1494" height="364" key="#SQL_Dialects" timestamp="1604378713138">
+      <screen x="0" y="27" width="1500" height="973" />
+    </state>
+    <state x="1" y="339" width="1494" height="364" key="#SQL_Dialects/0.27.1500.973@0.27.1500.973" timestamp="1604378713138" />
+    <state x="208" y="150" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604378781528">
+      <screen x="0" y="27" width="1500" height="973" />
+    </state>
+    <state x="208" y="150" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1500.973@0.27.1500.973" timestamp="1604378781528" />
+    <state x="483" y="223" width="530" height="609" key="FileChooserDialogImpl" timestamp="1604375429294">
+      <screen x="0" y="27" width="1500" height="973" />
+    </state>
+    <state x="483" y="223" width="530" height="609" key="FileChooserDialogImpl/0.27.1500.973@0.27.1500.973" timestamp="1604375429294" />
+  </component>
+</project>
