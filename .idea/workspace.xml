@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="015de4ed-a3f1-4bc8-936c-059540607e24" name="Default Changelist" comment="" />
+    <list default="true" id="015de4ed-a3f1-4bc8-936c-059540607e24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/const.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/const.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +38,10 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/usr/local/go" />
+  <component name="GOROOT" path="/snap/go/current" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
@@ -28,10 +55,14 @@
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -41,13 +72,39 @@
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="015de4ed-a3f1-4bc8-936c-059540607e24" name="Default Changelist" comment="" />
+      <created>1605689137258</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605689137258</updated>
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
+    <state x="548" y="444" width="618" height="427" key="#GOROOT" timestamp="1605689402156">
+      <screen x="0" y="27" width="1500" height="973" />
+    </state>
+    <state x="548" y="444" width="618" height="427" key="#GOROOT/0.27.1500.973@0.27.1500.973" timestamp="1605689402156" />
     <state x="498" y="314" width="500" height="413" key="#Go_Modules" timestamp="1604375298812">
       <screen x="0" y="27" width="1500" height="973" />
     </state>
@@ -56,13 +113,17 @@
       <screen x="0" y="27" width="1500" height="973" />
     </state>
     <state x="1" y="339" width="1494" height="364" key="#SQL_Dialects/0.27.1500.973@0.27.1500.973" timestamp="1604378713138" />
-    <state x="208" y="150" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604378781528">
+    <state x="208" y="146" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605689187625">
       <screen x="0" y="27" width="1500" height="973" />
     </state>
-    <state x="208" y="150" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1500.973@0.27.1500.973" timestamp="1604378781528" />
+    <state x="208" y="146" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1500.973@0.27.1500.973" timestamp="1605689187625" />
     <state x="483" y="223" width="530" height="609" key="FileChooserDialogImpl" timestamp="1604375429294">
       <screen x="0" y="27" width="1500" height="973" />
     </state>
     <state x="483" y="223" width="530" height="609" key="FileChooserDialogImpl/0.27.1500.973@0.27.1500.973" timestamp="1604375429294" />
+    <state x="249" y="150" width="1001" height="741" key="SettingsEditor" timestamp="1605689383546">
+      <screen x="0" y="27" width="1500" height="973" />
+    </state>
+    <state x="249" y="150" width="1001" height="741" key="SettingsEditor/0.27.1500.973@0.27.1500.973" timestamp="1605689383546" />
   </component>
 </project>
