@@ -13,7 +13,7 @@ type major struct {
 
 func GetMajor(c *fiber.Ctx) error {
 	if db.GetRoleFromToken(c.Locals("user").(*jwt.Token)) != "a" {
-		return c.JSON(createMajorResponse{Error: 1})
+		return c.SendStatus(403)
 	}
 	sqlResult, err := db.Db.Query("select major_id,major_name from nusbiam.Majors")
 	if err != nil {
