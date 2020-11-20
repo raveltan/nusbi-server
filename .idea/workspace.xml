@@ -20,11 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="015de4ed-a3f1-4bc8-936c-059540607e24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/helper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/major/createMajor.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/major/deleteMajor.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/major/getMajor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/50ecb99b-4f64-42ff-90fb-00f4801a468d.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/50ecb99b-4f64-42ff-90fb-00f4801a468d/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/const.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/const.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/createToken.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/createToken.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/createUser.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/createUser.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/login.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,10 +73,11 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/database" />
       <recent name="$PROJECT_DIR$/auth" />
       <recent name="$PROJECT_DIR$" />
@@ -113,17 +125,33 @@
       <screen x="0" y="27" width="1500" height="973" />
     </state>
     <state x="1" y="339" width="1494" height="364" key="#SQL_Dialects/0.27.1500.973@0.27.1500.973" timestamp="1604378713138" />
-    <state x="208" y="146" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605689187625">
+    <state x="169" y="381" width="1157" height="279" key="#SQL_Resolution_Scopes" timestamp="1605716896830">
       <screen x="0" y="27" width="1500" height="973" />
     </state>
-    <state x="208" y="146" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1500.973@0.27.1500.973" timestamp="1605689187625" />
+    <state x="169" y="381" width="1157" height="279" key="#SQL_Resolution_Scopes/0.27.1500.973@0.27.1500.973" timestamp="1605716896830" />
+    <state x="208" y="138" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605716825422">
+      <screen x="0" y="27" width="1500" height="973" />
+    </state>
+    <state x="208" y="138" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1500.973@0.27.1500.973" timestamp="1605716825422" />
     <state x="483" y="223" width="530" height="609" key="FileChooserDialogImpl" timestamp="1604375429294">
       <screen x="0" y="27" width="1500" height="973" />
     </state>
     <state x="483" y="223" width="530" height="609" key="FileChooserDialogImpl/0.27.1500.973@0.27.1500.973" timestamp="1604375429294" />
-    <state x="249" y="150" width="1001" height="741" key="SettingsEditor" timestamp="1605689383546">
+    <state width="245" height="500" key="HiddenNamespacesPopup" timestamp="1605716864407">
       <screen x="0" y="27" width="1500" height="973" />
     </state>
-    <state x="249" y="150" width="1001" height="741" key="SettingsEditor/0.27.1500.973@0.27.1500.973" timestamp="1605689383546" />
+    <state width="245" height="500" key="HiddenNamespacesPopup/0.27.1500.973@0.27.1500.973" timestamp="1605716864407" />
+    <state x="249" y="146" width="1001" height="741" key="SettingsEditor" timestamp="1605690121475">
+      <screen x="0" y="27" width="1500" height="973" />
+    </state>
+    <state x="249" y="146" width="1001" height="741" key="SettingsEditor/0.27.1500.973@0.27.1500.973" timestamp="1605690121475" />
+    <state width="82" height="482" key="SqlResolveConfigurable" timestamp="1605716895638">
+      <screen x="0" y="27" width="1500" height="973" />
+    </state>
+    <state width="82" height="482" key="SqlResolveConfigurable/0.27.1500.973@0.27.1500.973" timestamp="1605716895638" />
+    <state x="450" y="351" width="801" height="468" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605716858970">
+      <screen x="0" y="27" width="1500" height="973" />
+    </state>
+    <state x="450" y="351" width="801" height="468" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.27.1500.973@0.27.1500.973" timestamp="1605716858970" />
   </component>
 </project>

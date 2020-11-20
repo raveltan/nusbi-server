@@ -24,6 +24,7 @@ type loginResponse struct {
 	Token   string
 	Refresh string
 	Error   int
+	Role string
 }
 
 func Login(c *fiber.Ctx) error {
@@ -63,9 +64,14 @@ func Login(c *fiber.Ctx) error {
 	if err != nil {
 		return c.SendStatus(500)
 	}
+	refresh,err := createRefreshToken(req.Username,role)
+	if err!=nil{
+		return c.SendStatus(500)
+	}
 	return c.JSON(loginResponse{
 		Token:   token,
-		Refresh: token,
+		Refresh: refresh,
 		Error:   -1,
+		Role: role,
 	})
 }
