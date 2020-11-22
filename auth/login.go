@@ -24,7 +24,7 @@ type loginResponse struct {
 	Token   string
 	Refresh string
 	Error   int
-	Role string
+	Role    string
 }
 
 func Login(c *fiber.Ctx) error {
@@ -46,14 +46,14 @@ func Login(c *fiber.Ctx) error {
 		return c.SendStatus(500)
 	}
 	var role string
-	for sqlRes.Next(){
+	for sqlRes.Next() {
 		var pass string
-		err = sqlRes.Scan(&role,&pass)
+		err = sqlRes.Scan(&role, &pass)
 		if err != nil {
 			return c.SendStatus(500)
 		}
 		err = bcrypt.CompareHashAndPassword([]byte(pass), []byte(req.Password))
-		if err != nil{
+		if err != nil {
 			role = ""
 		}
 	}
@@ -64,14 +64,14 @@ func Login(c *fiber.Ctx) error {
 	if err != nil {
 		return c.SendStatus(500)
 	}
-	refresh,err := createRefreshToken(req.Username,role)
-	if err!=nil{
+	refresh, err := createRefreshToken(req.Username, role)
+	if err != nil {
 		return c.SendStatus(500)
 	}
 	return c.JSON(loginResponse{
 		Token:   token,
 		Refresh: refresh,
 		Error:   -1,
-		Role: role,
+		Role:    role,
 	})
 }

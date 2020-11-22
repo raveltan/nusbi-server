@@ -5,13 +5,14 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
 	db "nusbi-server/config"
+	"strings"
 )
 
 type createMajorResponse struct {
 	Error int
 }
 
-type createMajorRequest struct{
+type createMajorRequest struct {
 	Name string
 }
 
@@ -20,6 +21,7 @@ type createMajorRequest struct{
 1: Token role invalid
 2: Body parsing failed
 3: Name too short
+4: Exists
 */
 
 func CreateMajor(c *fiber.Ctx) error {
@@ -36,7 +38,12 @@ func CreateMajor(c *fiber.Ctx) error {
 	_, err := db.Db.Exec("insert into nusbiam.Majors (major_id, major_name) VALUE (?,?)",
 		uuid.New().String(), request.Name,
 	)
-	if err!=nil{
+	if err != nil {
+		if strings.Contains(err.Error(), "Error 1062") {
+			return c.JSON(createMajorResponse{
+				Error: 4,
+			})
+		}
 		return c.SendStatus(500)
 	}
 	return c.JSON(createMajorResponse{Error: -1})

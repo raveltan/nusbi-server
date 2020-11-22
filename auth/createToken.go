@@ -1,11 +1,12 @@
 package auth
 
 import (
-	"github.com/dgrijalva/jwt-go"
+	"github.com/form3tech-oss/jwt-go"
+	"github.com/gofiber/fiber/v2"
 	"time"
 )
 
-func createToken(username string,role string) (string,error){
+func createToken(username string, role string) (string, error) {
 	// Create token
 	token := jwt.New(jwt.SigningMethodHS256)
 
@@ -18,12 +19,12 @@ func createToken(username string,role string) (string,error){
 	// Generate encoded token and send it as response.
 	t, err := token.SignedString([]byte("yigeiwoligiaogiao"))
 	if err != nil {
-		return "",err
+		return "", err
 	}
-	return t,nil
+	return t, nil
 }
 
-func createRefreshToken(username string,role string) (string,error){
+func createRefreshToken(username string, role string) (string, error) {
 	// Create token
 	token := jwt.New(jwt.SigningMethodHS256)
 
@@ -36,7 +37,33 @@ func createRefreshToken(username string,role string) (string,error){
 	// Generate encoded token and send it as response.
 	t, err := token.SignedString([]byte("aoligei"))
 	if err != nil {
-		return "",err
+		return "", err
 	}
-	return t,nil
+	return t, nil
+}
+
+type tokenRefreshResponse struct {
+	Token   string
+	Refresh string
+}
+
+func RefreshToken(c *fiber.Ctx) error {
+	data := c.Locals("user").(*jwt.Token)
+	claims := data.Claims.(jwt.MapClaims)
+	name := claims["name"].(string)
+	role := claims["role"].(string)
+
+	token, err := createToken(name, role)
+	if err != nil {
+		return c.SendStatus(500)
+	}
+	refresh, err := createRefreshToken(name, role)
+	if err != nil {
+		return c.SendStatus(500)
+	}
+	var result = tokenRefreshResponse{
+		Token:   token,
+		Refresh: refresh,
+	}
+	return c.JSON(result)
 }

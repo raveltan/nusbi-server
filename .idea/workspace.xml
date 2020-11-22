@@ -20,12 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="015de4ed-a3f1-4bc8-936c-059540607e24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/nusbi-linux" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/nusbi-win.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/nusbi.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/getUser.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/major/getMajor.go" beforeDir="false" afterPath="$PROJECT_DIR$/major/getMajor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/createToken.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/createToken.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/createUser.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/createUser.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/nusbi-linux" beforeDir="false" afterPath="$PROJECT_DIR$/dist/nusbi-linux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/nusbi-win.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/nusbi-win.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/major/createMajor.go" beforeDir="false" afterPath="$PROJECT_DIR$/major/createMajor.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,9 +149,9 @@
       <screen x="0" y="27" width="1500" height="973" />
     </state>
     <state width="82" height="482" key="SqlResolveConfigurable/0.27.1500.973@0.27.1500.973" timestamp="1605716895638" />
-    <state x="450" y="351" width="801" height="468" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605716858970">
+    <state x="450" y="347" width="801" height="468" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605887632032">
       <screen x="0" y="27" width="1500" height="973" />
     </state>
-    <state x="450" y="351" width="801" height="468" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.27.1500.973@0.27.1500.973" timestamp="1605716858970" />
+    <state x="450" y="347" width="801" height="468" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.27.1500.973@0.27.1500.973" timestamp="1605887632032" />
   </component>
 </project>

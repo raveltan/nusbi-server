@@ -5,7 +5,6 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
 	"golang.org/x/crypto/bcrypt"
-	"log"
 	db "nusbi-server/config"
 	"strings"
 )
@@ -74,6 +73,7 @@ func CreateUser(c *fiber.Ctx) error {
 2: Invalid request body
 3: Username short
 4: Password short
+5: Duplicate user
 */
 
 type createAdminRequest struct {
@@ -113,6 +113,9 @@ func CreateAdmin(c *fiber.Ctx) error {
 		"a",
 	)
 	if err != nil {
+		if strings.Contains(err.Error(),"Error 1062"){
+			return c.JSON(createUserResponse{Error: 5})
+		}
 		return c.SendStatus(500)
 	}
 	return c.JSON(createUserResponse{Error: -1})
@@ -141,6 +144,7 @@ type createStudentResponse struct {
 3: Short username
 4: Short possword
 5: Duplicate user
+6: Invalid major
 */
 
 func CreateStudent(c *fiber.Ctx) error {
@@ -165,7 +169,7 @@ func CreateStudent(c *fiber.Ctx) error {
 		"insert into Users (user_id, password, role) VALUES (?,?,?)",
 		strings.ToLower(request.Username),
 		string(hash),
-		"a",
+		"s",
 	)
 	if err != nil {
 		if strings.Contains(err.Error(),"Error 1062"){
@@ -177,7 +181,9 @@ func CreateStudent(c *fiber.Ctx) error {
 		" value (?,?,?,?,?,?,?,?,?)",
 		uuid.New().String(), request.FirstName, request.LastName, request.Gender, request.Dob, request.Email, request.Username, request.Major, request.Batch)
 	if err!=nil{
-		log.Println(err)
+		if strings.Contains(err.Error(),"Error 1452"){
+			return c.JSON(createStudentResponse{Error: 6})
+		}
 		return c.SendStatus(500)
 	}
 	return c.JSON(createUserResponse{Error: -1})
