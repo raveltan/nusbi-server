@@ -133,9 +133,7 @@ type createStudentRequest struct {
 	Major string
 }
 
-type createStudentResponse struct {
-	Error int
-}
+
 
 /*
 -1: Success
@@ -173,7 +171,7 @@ func CreateStudent(c *fiber.Ctx) error {
 	)
 	if err != nil {
 		if strings.Contains(err.Error(),"Error 1062"){
-			return c.JSON(createStudentResponse{Error: 5})
+			return c.JSON(createAdminResponse{Error: 5})
 		}
 		return c.SendStatus(500)
 	}
@@ -182,8 +180,66 @@ func CreateStudent(c *fiber.Ctx) error {
 		uuid.New().String(), request.FirstName, request.LastName, request.Gender, request.Dob, request.Email, request.Username, request.Major, request.Batch)
 	if err!=nil{
 		if strings.Contains(err.Error(),"Error 1452"){
-			return c.JSON(createStudentResponse{Error: 6})
+			return c.JSON(createAdminResponse{Error: 6})
 		}
+		return c.SendStatus(500)
+	}
+	return c.JSON(createUserResponse{Error: -1})
+}
+
+type createTeacherRequest struct {
+	Username  string
+	Password  string
+	FirstName string
+	LastName  string
+	Gender    string
+	Dob       string
+	Email     string
+}
+
+/*
+-1: Success
+1: Invalid token role
+2: Body parsing error
+3: Short username
+4: Short possword
+5: Duplicate user
+*/
+
+func CreateTeacher(c *fiber.Ctx) error {
+	if db.GetRoleFromToken(c.Locals("user").(*jwt.Token)) != "a" {
+		return c.JSON(createAdminResponse{Error: 1})
+	}
+	request := createTeacherRequest{}
+	if err := c.BodyParser(&request); err != nil {
+		return c.JSON(createAdminResponse{Error: 2})
+	}
+	if len(request.Username) < 5 {
+		return c.JSON(createAdminResponse{Error: 3})
+	}
+	if len(request.Password) < 8 {
+		return c.JSON(createAdminResponse{Error: 4})
+	}
+	hash, err := bcrypt.GenerateFromPassword([]byte(request.Password), 7)
+	if err != nil {
+		return c.SendStatus(500)
+	}
+	_, err = db.Db.Exec(
+		"insert into Users (user_id, password, role) VALUES (?,?,?)",
+		strings.ToLower(request.Username),
+		string(hash),
+		"t",
+	)
+	if err != nil {
+		if strings.Contains(err.Error(),"Error 1062"){
+			return c.JSON(createAdminResponse{Error: 5})
+		}
+		return c.SendStatus(500)
+	}
+	_, err = db.Db.Exec("insert into nusbiam.Lecturers (lecturer_id,first_name,last_name,gender,dob,email,user_id)"+
+		" value (?,?,?,?,?,?,?)",
+		uuid.New().String(), request.FirstName, request.LastName, request.Gender, request.Dob, request.Email, request.Username)
+	if err!=nil{
 		return c.SendStatus(500)
 	}
 	return c.JSON(createUserResponse{Error: -1})

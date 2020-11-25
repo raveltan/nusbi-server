@@ -8,6 +8,7 @@ import (
 	"log"
 	"nusbi-server/auth"
 	"nusbi-server/config"
+	"nusbi-server/courses"
 	"nusbi-server/major"
 )
 
@@ -39,12 +40,15 @@ func main() {
 
 	app.Post("/admin/user/createAdmin", auth.CreateAdmin)
 	app.Post("/admin/user/createStudent", auth.CreateStudent)
+	app.Post("/admin/user/createTeacher", auth.CreateTeacher)
 
 	app.Get("/admin/user/", auth.GetUserList)
 
 	app.Post("/admin/major/", major.CreateMajor)
 	app.Delete("/admin/major", major.DeleteMajor)
 	app.Get("/admin/major", major.GetMajor)
+
+	app.Post("/admin/course",courses.CreateCourse)
 
 	// Start webserver
 	log.Println(app.Listen(config.Port))

@@ -20,15 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="015de4ed-a3f1-4bc8-936c-059540607e24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/auth/getUser.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/createCourse.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/getCourse.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/getLecturer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/createToken.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/createToken.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/createUser.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/createUser.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/login.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/nusbi-linux" beforeDir="false" afterPath="$PROJECT_DIR$/dist/nusbi-linux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/nusbi-win.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/nusbi-win.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/major/createMajor.go" beforeDir="false" afterPath="$PROJECT_DIR$/major/createMajor.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +42,13 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/snap/go/current" />
+  <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
+    <option name="useGoPathFromSystemEnvironment" value="false" />
   </component>
   <component name="ProjectId" id="1jlOQhDjRWnUw8DURqWhQZxbPvj" />
   <component name="ProjectLevelVcsManager">
@@ -64,13 +65,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="true" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -113,9 +114,14 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="548" y="444" width="618" height="427" key="#GOROOT" timestamp="1605689402156">
-      <screen x="0" y="27" width="1500" height="973" />
+    <state x="461" y="83" key="#GOPATH" timestamp="1606180335047">
+      <screen x="0" y="0" width="1333" height="849" />
     </state>
+    <state x="461" y="83" key="#GOPATH/0.0.1333.849@0.0.1333.849" timestamp="1606180335047" />
+    <state x="487" y="364" width="618" height="427" key="#GOROOT" timestamp="1606180316370">
+      <screen x="0" y="0" width="1333" height="849" />
+    </state>
+    <state x="487" y="364" key="#GOROOT/0.0.1333.849@0.0.1333.849" timestamp="1606180316370" />
     <state x="548" y="444" width="618" height="427" key="#GOROOT/0.27.1500.973@0.27.1500.973" timestamp="1605689402156" />
     <state x="498" y="314" width="500" height="413" key="#Go_Modules" timestamp="1604375298812">
       <screen x="0" y="27" width="1500" height="973" />
@@ -129,21 +135,25 @@
       <screen x="0" y="27" width="1500" height="973" />
     </state>
     <state x="169" y="381" width="1157" height="279" key="#SQL_Resolution_Scopes/0.27.1500.973@0.27.1500.973" timestamp="1605716896830" />
-    <state x="208" y="138" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605716825422">
-      <screen x="0" y="27" width="1500" height="973" />
+    <state x="185" y="97" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606202485277">
+      <screen x="0" y="0" width="1333" height="849" />
     </state>
+    <state x="185" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1333.849@0.0.1333.849" timestamp="1606202485277" />
     <state x="208" y="138" width="1084" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1500.973@0.27.1500.973" timestamp="1605716825422" />
-    <state x="483" y="223" width="530" height="609" key="FileChooserDialogImpl" timestamp="1604375429294">
-      <screen x="0" y="27" width="1500" height="973" />
+    <state x="429" y="171" width="530" height="609" key="FileChooserDialogImpl" timestamp="1606180328609">
+      <screen x="0" y="0" width="1333" height="849" />
     </state>
+    <state x="429" y="171" key="FileChooserDialogImpl/0.0.1333.849@0.0.1333.849" timestamp="1606180328609" />
     <state x="483" y="223" width="530" height="609" key="FileChooserDialogImpl/0.27.1500.973@0.27.1500.973" timestamp="1604375429294" />
-    <state width="245" height="500" key="HiddenNamespacesPopup" timestamp="1605716864407">
-      <screen x="0" y="27" width="1500" height="973" />
+    <state width="218" height="437" key="HiddenNamespacesPopup" timestamp="1606202536193">
+      <screen x="0" y="0" width="1333" height="849" />
     </state>
+    <state width="218" height="437" key="HiddenNamespacesPopup/0.0.1333.849@0.0.1333.849" timestamp="1606202536193" />
     <state width="245" height="500" key="HiddenNamespacesPopup/0.27.1500.973@0.27.1500.973" timestamp="1605716864407" />
-    <state x="249" y="146" width="1001" height="741" key="SettingsEditor" timestamp="1605690121475">
-      <screen x="0" y="27" width="1500" height="973" />
+    <state x="221" y="104" width="912" height="706" key="SettingsEditor" timestamp="1606202561099">
+      <screen x="0" y="0" width="1333" height="849" />
     </state>
+    <state x="221" y="104" width="912" height="706" key="SettingsEditor/0.0.1333.849@0.0.1333.849" timestamp="1606202561099" />
     <state x="249" y="146" width="1001" height="741" key="SettingsEditor/0.27.1500.973@0.27.1500.973" timestamp="1605690121475" />
     <state width="82" height="482" key="SqlResolveConfigurable" timestamp="1605716895638">
       <screen x="0" y="27" width="1500" height="973" />
