@@ -20,14 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="015de4ed-a3f1-4bc8-936c-059540607e24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/courses/createCourse.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courses/getCourse.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courses/getLecturer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/createUser.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/createUser.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/getCourse.go" beforeDir="false" afterPath="$PROJECT_DIR$/courses/getCourse.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/getLecturer.go" beforeDir="false" afterPath="$PROJECT_DIR$/courses/getLecturer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

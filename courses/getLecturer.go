@@ -17,7 +17,7 @@ type lecturer struct {
 
 func GetLecturer(c *fiber.Ctx) error {
 	if db.GetRoleFromToken(c.Locals("user").(*jwt.Token)) != "a" {
-		return c.SendStatus(400)
+		return c.SendStatus(403)
 	}
 	res, err := db.Db.Query("select first_name,last_name,lecturer_id from Lecturers")
 	if err != nil {

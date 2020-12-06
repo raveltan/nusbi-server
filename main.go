@@ -49,6 +49,8 @@ func main() {
 	app.Get("/admin/major", major.GetMajor)
 
 	app.Post("/admin/course",courses.CreateCourse)
+	app.Get("/admin/course",courses.GetCourse)
+	app.Get("/admin/lecturer",courses.GetLecturer)
 
 	// Start webserver
 	log.Println(app.Listen(config.Port))

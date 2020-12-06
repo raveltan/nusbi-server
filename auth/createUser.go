@@ -140,7 +140,7 @@ type createStudentRequest struct {
 1: Invalid token role
 2: Body parsing error
 3: Short username
-4: Short possword
+4: Short password
 5: Duplicate user
 6: Invalid major
 */
