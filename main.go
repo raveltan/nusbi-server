@@ -9,6 +9,7 @@ import (
 	"nusbi-server/auth"
 	"nusbi-server/config"
 	"nusbi-server/courses"
+	"nusbi-server/courses/class"
 	"nusbi-server/major"
 )
 
@@ -22,6 +23,10 @@ func main() {
 	app := fiber.New()
 	app.Use(cors.New())
 	// No auth routes
+
+	// REmove on production
+	app.Post("/createUser", auth.CreateUser)
+
 	app.Post("/login", auth.Login)
 
 	// Refresh token route
@@ -30,12 +35,13 @@ func main() {
 	}))
 	app.Post("/refresh", auth.RefreshToken)
 
+
 	// Auth routes
 	app.Use(jwtware.New(jwtware.Config{
 		SigningKey: []byte("yigeiwoligiaogiao"),
 	}))
 
-	app.Post("/createUser", auth.CreateUser)
+
 
 
 	app.Post("/admin/user/createAdmin", auth.CreateAdmin)
@@ -51,6 +57,8 @@ func main() {
 	app.Post("/admin/course",courses.CreateCourse)
 	app.Get("/admin/course",courses.GetCourse)
 	app.Get("/admin/lecturer",courses.GetLecturer)
+
+	app.Post("/admin/class",class.CreateClass)
 
 	// Start webserver
 	log.Println(app.Listen(config.Port))
