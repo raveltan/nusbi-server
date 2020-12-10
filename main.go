@@ -10,6 +10,7 @@ import (
 	"nusbi-server/config"
 	"nusbi-server/courses"
 	"nusbi-server/courses/class"
+	"nusbi-server/courses/schedule"
 	"nusbi-server/major"
 )
 
@@ -41,9 +42,6 @@ func main() {
 		SigningKey: []byte("yigeiwoligiaogiao"),
 	}))
 
-
-
-
 	app.Post("/admin/user/createAdmin", auth.CreateAdmin)
 	app.Post("/admin/user/createStudent", auth.CreateStudent)
 	app.Post("/admin/user/createTeacher", auth.CreateTeacher)
@@ -59,6 +57,9 @@ func main() {
 	app.Get("/admin/lecturer",courses.GetLecturer)
 
 	app.Post("/admin/class",class.CreateClass)
+	app.Get("/admin/class/:id",class.GetClasses)
+
+	app.Post("/admin/schedule",schedule.CreateSchedule)
 
 	// Start webserver
 	log.Println(app.Listen(config.Port))
