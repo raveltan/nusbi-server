@@ -60,6 +60,8 @@ func main() {
 	app.Get("/admin/class/:id",class.GetClasses)
 
 	app.Post("/admin/schedule",schedule.CreateSchedule)
+	app.Get("/admin/schedule/:id",schedule.GetSchedule)
+	app.Delete("/admin/schedule/:id",schedule.DeleteSchedule)
 
 	// Start webserver
 	log.Println(app.Listen(config.Port))

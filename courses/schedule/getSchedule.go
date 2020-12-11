@@ -9,7 +9,7 @@ import (
 
 type getScheduleResponse struct{
 	ScheduleID string
-	date string
+	Date string
 }
 
 func GetSchedule(c *fiber.Ctx) error {
@@ -20,7 +20,7 @@ func GetSchedule(c *fiber.Ctx) error {
 	if db.GetRoleFromToken(c.Locals("user").(*jwt.Token)) != "a" {
 		return c.SendStatus(403)
 	}
-	res,err:=db.Db.Query("select date_time,schedule_id from Schedules where class_id = ?",id)
+	res,err:=db.Db.Query("select date_time,schedule_id from Schedules where class_id = ? order by date_time desc",id)
 	if err!=nil{
 		return c.SendStatus(500)
 	}
@@ -30,7 +30,7 @@ func GetSchedule(c *fiber.Ctx) error {
 	result := []getScheduleResponse{}
 	for res.Next(){
 		var temp getScheduleResponse
-		err = res.Scan(&temp.date,&temp.ScheduleID)
+		err = res.Scan(&temp.Date,&temp.ScheduleID)
 		if err!=nil{
 			return c.SendStatus(500)
 		}
