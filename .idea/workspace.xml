@@ -20,10 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="015de4ed-a3f1-4bc8-936c-059540607e24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/student/getProfile.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher/getTeacherProfile.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/addStudentEnroll.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/getCourseClass.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/nusbi.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dist/nusbi.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +70,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">

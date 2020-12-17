@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="nusbiam@localhost" uuid="b8420320-d29b-4e52-b3d0-59e02405770d">
-      <database-info product="MySQL" version="8.0.22" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="8.0.22" exact-driver-version="8.0">
+    <data-source name="nusbiam@localhost" uuid="f61c8af8-fabf-4269-89c9-c57a4d42ec12">
+      <database-info product="MySQL" version="8.0.22-0ubuntu0.20.04.3" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="8.0.22" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>

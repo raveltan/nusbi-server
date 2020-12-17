@@ -27,7 +27,7 @@ func main() {
 	app.Use(cors.New())
 	// No auth routes
 
-	// REmove on production
+	// Remove on production
 	app.Post("/createUser", auth.CreateUser)
 
 	app.Post("/login", auth.Login)
@@ -68,6 +68,8 @@ func main() {
 	app.Get("/student/profile/:id",student.GetStudentProfile)
 
 	app.Get("/teacher/profile/:id",teacher.GetTeacherProfile)
+
+	app.Get("/admin/classCourse/",courses.GetCourseClass)
 	// Start webserver
 	log.Println(app.Listen(config.Port))
 }
