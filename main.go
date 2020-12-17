@@ -12,6 +12,8 @@ import (
 	"nusbi-server/courses/class"
 	"nusbi-server/courses/schedule"
 	"nusbi-server/major"
+	"nusbi-server/student"
+	"nusbi-server/teacher"
 )
 
 func main() {
@@ -63,6 +65,9 @@ func main() {
 	app.Get("/admin/schedule/:id",schedule.GetSchedule)
 	app.Delete("/admin/schedule/:id",schedule.DeleteSchedule)
 
+	app.Get("/student/profile/:id",student.GetStudentProfile)
+
+	app.Get("/teacher/profile/:id",teacher.GetTeacherProfile)
 	// Start webserver
 	log.Println(app.Listen(config.Port))
 }
