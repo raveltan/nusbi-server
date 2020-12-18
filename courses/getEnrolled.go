@@ -3,40 +3,42 @@ package courses
 import (
 	"github.com/form3tech-oss/jwt-go"
 	"github.com/gofiber/fiber/v2"
+	"log"
 	db "nusbi-server/config"
 )
 
-type getCourseClassResponse struct {
+type getEnrolledResponse struct {
 	ClassName  string
 	CourseName string
 	ClassID    string
 }
 
-
-
-func GetCourseClass(c *fiber.Ctx) error {
+func GetEnrolled(c *fiber.Ctx) error {
 	if db.GetRoleFromToken(c.Locals("user").(*jwt.Token)) != "a" {
 		return c.SendStatus(403)
 	}
-	id:=c.Params("id")
+	id := c.Params("id")
 	if id == "" {
 		return c.SendStatus(400)
 	}
 	res, err := db.Db.Query(
-		"select class_id,course_name,class_name from Courses, Class where Class.course_id = Courses.course_id and class_id not in (select class_id from Enrolled_Courses where student_id = (select student_id from Students where user_id = ?))",
+		"select e.class_id,class_name,course_name from Enrolled_Courses e,Class c,Courses cs where c.class_id = e.class_id and c.course_id = cs.course_id and e.student_id = (select student_id from Students where user_id = ?)",
 		id,
 	)
 	if err != nil {
+		log.Println(err)
 		return c.SendStatus(500)
 	}
 	if res.Err() != nil {
+		log.Println(err)
 		return c.SendStatus(500)
 	}
-	var result []getCourseClassResponse
+	var result []getEnrolledResponse
 	for res.Next() {
-		var temp getCourseClassResponse
-		err = res.Scan(&temp.ClassID, &temp.CourseName, &temp.ClassName)
+		var temp getEnrolledResponse
+		err = res.Scan(&temp.ClassID, &temp.ClassName, &temp.CourseName)
 		if err != nil {
+			log.Println(err)
 			return c.SendStatus(500)
 		}
 		result = append(result, temp)

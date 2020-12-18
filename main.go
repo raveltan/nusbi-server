@@ -69,7 +69,10 @@ func main() {
 
 	app.Get("/teacher/profile/:id",teacher.GetTeacherProfile)
 
-	app.Get("/admin/classCourse/",courses.GetCourseClass)
+	app.Get("/admin/classCourse/:id",courses.GetCourseClass)
+	app.Post("/admin/enroll",courses.AddStudentEnroll)
+	app.Get("/admin/enroll/:id",courses.GetEnrolled)
+
 	// Start webserver
 	log.Println(app.Listen(config.Port))
 }
