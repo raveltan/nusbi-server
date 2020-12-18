@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="015de4ed-a3f1-4bc8-936c-059540607e24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/courses/getEnrolled.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/dump.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/getStudentCourse.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student/getStudentSchedule.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courses/addStudentEnroll.go" beforeDir="false" afterPath="$PROJECT_DIR$/courses/addStudentEnroll.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/courses/getCourseClass.go" beforeDir="false" afterPath="$PROJECT_DIR$/courses/getCourseClass.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/nusbi.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +78,18 @@
       <recent name="$PROJECT_DIR$/auth" />
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="console_9.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/f61c8af8-fabf-4269-89c9-c57a4d42ec12/console_9.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.console_9.sql" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

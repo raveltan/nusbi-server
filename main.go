@@ -73,6 +73,9 @@ func main() {
 	app.Post("/admin/enroll",courses.AddStudentEnroll)
 	app.Get("/admin/enroll/:id",courses.GetEnrolled)
 
+	app.Get("/student/course/:id",student.GetStudentCourse)
+	app.Get("/student/schedule/:id",student.GetStudentScheduleRequest)
+
 	// Start webserver
 	log.Println(app.Listen(config.Port))
 }
