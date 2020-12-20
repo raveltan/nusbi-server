@@ -76,6 +76,8 @@ func main() {
 	app.Get("/student/course/:id",student.GetStudentCourse)
 	app.Get("/student/schedule/:id",student.GetStudentScheduleRequest)
 
+	app.Get("/teacher/schedule/:id",teacher.GetTeacherScheduleRequest)
+
 	// Start webserver
 	log.Println(app.Listen(config.Port))
 }
