@@ -11,7 +11,10 @@
       <user-name>joko</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="@" />
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="nusbiam" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>

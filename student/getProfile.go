@@ -95,7 +95,7 @@ func GetStudentProfile(c *fiber.Ctx) error {
 		gpa += score
 	}
 	r.GPA = sql.NullFloat64{
-		Float64: gpa/float64(count),
+		Float64: gpa/float64(count) + 0.001,
 		Valid:   true,
 	}
 	return c.JSON(r)
