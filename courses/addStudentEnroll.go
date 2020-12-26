@@ -3,7 +3,6 @@ package courses
 import (
 	"github.com/form3tech-oss/jwt-go"
 	"github.com/gofiber/fiber/v2"
-	"github.com/google/uuid"
 	db "nusbi-server/config"
 )
 
@@ -22,8 +21,8 @@ func AddStudentEnroll(c *fiber.Ctx) error {
 		return c.SendStatus(400)
 	}
 	_, err = db.Db.Exec(
-		"insert into Enrolled_Courses (enrolled_id, student_id, class_id, mid_score, final_score) value  (?,(select student_id from Students where user_id = ?),?,-1,-1)",
-		uuid.New().String(), req.Username, req.ClassID,
+		"insert into Enrolled_Courses (student_id, class_id, mid_score, final_score) value  ((select student_id from Students where user_id = ?),?,-1,-1)",
+		req.Username, req.ClassID,
 	)
 	if err != nil {
 		return c.SendStatus(500)
