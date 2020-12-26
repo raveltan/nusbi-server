@@ -23,10 +23,8 @@ DROP TABLE IF EXISTS `Absence`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Absence` (
-  `attendance_id` varchar(60) NOT NULL,
   `student_id` varchar(60) NOT NULL,
   `schedule_id` varchar(60) NOT NULL,
-  PRIMARY KEY (`attendance_id`),
   KEY `student_id` (`student_id`),
   KEY `schedule_id` (`schedule_id`),
   CONSTRAINT `Absence_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `Students` (`student_id`) ON DELETE CASCADE,
@@ -107,12 +105,10 @@ DROP TABLE IF EXISTS `Enrolled_Courses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Enrolled_Courses` (
-  `enrolled_id` varchar(60) NOT NULL,
   `student_id` varchar(60) NOT NULL,
   `class_id` varchar(60) NOT NULL,
   `mid_score` tinyint DEFAULT NULL,
   `final_score` tinyint DEFAULT NULL,
-  PRIMARY KEY (`enrolled_id`),
   KEY `student_id` (`student_id`),
   KEY `class_id` (`class_id`),
   CONSTRAINT `Enrolled_Courses_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `Students` (`student_id`) ON DELETE CASCADE,
@@ -126,7 +122,7 @@ CREATE TABLE `Enrolled_Courses` (
 
 LOCK TABLES `Enrolled_Courses` WRITE;
 /*!40000 ALTER TABLE `Enrolled_Courses` DISABLE KEYS */;
-INSERT INTO `Enrolled_Courses` VALUES ('13aab21a-3b1e-4623-8cc5-f6b2b53f8e7b','656d6bf2-d8da-4870-b808-e1b2d15d732d','0e08f5f2-9f64-4215-a163-52be08157dd1',-1,-1),('289616aa-8522-4b16-9902-a8df8f755aec','1a567f11-66e5-4e38-b8e0-5bffa53b1af8','6316e712-1c20-4c46-919a-cfe294d3f0c0',-1,-1),('41f376b2-21e3-4756-9ffc-1c63830cb380','14009124-ef12-45e0-8b64-4004d40ad95f','0e08f5f2-9f64-4215-a163-52be08157dd1',-1,-1),('639c0c58-a39c-462c-907c-8fe076b1bb39','1a567f11-66e5-4e38-b8e0-5bffa53b1af8','bffb3538-76fb-4678-a255-eb00053797b3',-1,-1),('71d8738e-0452-4732-842a-4acc2028eff3','14009124-ef12-45e0-8b64-4004d40ad95f','30298851-8bab-4fae-937a-7f9fd3f9ff54',-1,-1),('7bca92ee-baa1-4657-9222-6bc1fe3491bf','1a567f11-66e5-4e38-b8e0-5bffa53b1af8','68a73a70-5062-4bae-96ff-aecac9fc5697',-1,-1),('8a48a9f4-ea8a-49dd-a52b-cda0b081d6f2','14009124-ef12-45e0-8b64-4004d40ad95f','6316e712-1c20-4c46-919a-cfe294d3f0c0',-1,-1);
+INSERT INTO `Enrolled_Courses` VALUES ('656d6bf2-d8da-4870-b808-e1b2d15d732d','0e08f5f2-9f64-4215-a163-52be08157dd1',97,88),('1a567f11-66e5-4e38-b8e0-5bffa53b1af8','6316e712-1c20-4c46-919a-cfe294d3f0c0',99,98),('14009124-ef12-45e0-8b64-4004d40ad95f','0e08f5f2-9f64-4215-a163-52be08157dd1',-1,-1),('1a567f11-66e5-4e38-b8e0-5bffa53b1af8','bffb3538-76fb-4678-a255-eb00053797b3',-1,-1),('14009124-ef12-45e0-8b64-4004d40ad95f','30298851-8bab-4fae-937a-7f9fd3f9ff54',-1,-1),('1a567f11-66e5-4e38-b8e0-5bffa53b1af8','68a73a70-5062-4bae-96ff-aecac9fc5697',-1,-1),('14009124-ef12-45e0-8b64-4004d40ad95f','6316e712-1c20-4c46-919a-cfe294d3f0c0',99,55),('6de353ec-a038-4dba-8200-2386e9abdb83','68a73a70-5062-4bae-96ff-aecac9fc5697',-1,-1),('6de353ec-a038-4dba-8200-2386e9abdb83','bffb3538-76fb-4678-a255-eb00053797b3',-1,-1);
 /*!40000 ALTER TABLE `Enrolled_Courses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -227,8 +223,6 @@ CREATE TABLE `Students` (
   `dob` date NOT NULL,
   `email` varchar(40) NOT NULL,
   `user_id` varchar(60) NOT NULL,
-  `gpa` decimal(5,2) DEFAULT NULL,
-  `scu` tinyint DEFAULT NULL,
   `major_id` varchar(60) NOT NULL,
   `batch` smallint NOT NULL,
   PRIMARY KEY (`student_id`),
@@ -245,7 +239,7 @@ CREATE TABLE `Students` (
 
 LOCK TABLES `Students` WRITE;
 /*!40000 ALTER TABLE `Students` DISABLE KEYS */;
-INSERT INTO `Students` VALUES ('14009124-ef12-45e0-8b64-4004d40ad95f','william','marugame','M','2000-12-29','william@nosebee.com','william',NULL,NULL,'a1b01cdc-6fc2-44f7-a6b8-6c0ea3f2134a',2020),('1a567f11-66e5-4e38-b8e0-5bffa53b1af8','vincent','tandra','M','2020-12-15','vincent@nosebee.com','vincent',NULL,NULL,'343d40ca-b59e-4938-8f9c-4efaf0f5e8ff',2020),('656d6bf2-d8da-4870-b808-e1b2d15d732d','sutardi','berjaya','F','2006-12-21','sutardi@nosebee.com','sutardi',NULL,NULL,'343d40ca-b59e-4938-8f9c-4efaf0f5e8ff',2019);
+INSERT INTO `Students` VALUES ('14009124-ef12-45e0-8b64-4004d40ad95f','william','marugame','M','2000-12-29','william@nosebee.com','william','a1b01cdc-6fc2-44f7-a6b8-6c0ea3f2134a',2020),('1a567f11-66e5-4e38-b8e0-5bffa53b1af8','vincent','tandra','M','2020-12-15','vincent@nosebee.com','vincent','343d40ca-b59e-4938-8f9c-4efaf0f5e8ff',2020),('656d6bf2-d8da-4870-b808-e1b2d15d732d','sutardi','berjaya','F','2006-12-21','sutardi@nosebee.com','sutardi','343d40ca-b59e-4938-8f9c-4efaf0f5e8ff',2019),('6de353ec-a038-4dba-8200-2386e9abdb83','johny','sumarno','M','1985-12-19','johny@john.com','johny','a1b01cdc-6fc2-44f7-a6b8-6c0ea3f2134a',2023);
 /*!40000 ALTER TABLE `Students` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -270,7 +264,7 @@ CREATE TABLE `Users` (
 
 LOCK TABLES `Users` WRITE;
 /*!40000 ALTER TABLE `Users` DISABLE KEYS */;
-INSERT INTO `Users` VALUES ('ravel','$2a$07$rKtdH7dfNFQ5trlCQhSOz.GNnFsUe1gXkfWeT7hoJ6p7KcsQOSI/y','a'),('sumarno','$2a$07$qWRfW8Vp/04ADYxvwnPcfe88yUS21CFpkUzJjUgR.2JMYgcyav5sK','t'),('sutardi','$2a$07$9RpbkNeVTQgMeXDQQf4CmubPb3.TupjtHiFime/wS5k3f3fWxhdNC','s'),('tanjaya','$2a$07$lLm4za0ARCUMxRZ5rbL3O.arxS6qdwxfD1jz6Xl3KWEvh06nDHusi','a'),('vincent','$2a$07$jQMdlDwfs86i0lhPaT3zAOBhHuv6iThSrPffKxtuv7sEHIZlu832O','s'),('william','$2a$07$1NSVhshtRBTxYHIXJJHLPOwtfvNUi3lfNaJK4EjnvctoQ76AMNOxW','s'),('yowen','$2a$07$QmVEdrljotwNMLvcJu2f3O9UkNsjWm/k62aNBcu9sXd0ZhnSNe5oq','t');
+INSERT INTO `Users` VALUES ('johny','$2a$07$Xt4JFNRtxqVzurnksm.sSuqjRH..umbS5i7cGxtvMThz2N2wV5yGq','s'),('ravel','$2a$07$rKtdH7dfNFQ5trlCQhSOz.GNnFsUe1gXkfWeT7hoJ6p7KcsQOSI/y','a'),('sumarno','$2a$07$qWRfW8Vp/04ADYxvwnPcfe88yUS21CFpkUzJjUgR.2JMYgcyav5sK','t'),('sutardi','$2a$07$9RpbkNeVTQgMeXDQQf4CmubPb3.TupjtHiFime/wS5k3f3fWxhdNC','s'),('tanjaya','$2a$07$lLm4za0ARCUMxRZ5rbL3O.arxS6qdwxfD1jz6Xl3KWEvh06nDHusi','a'),('vincent','$2a$07$jQMdlDwfs86i0lhPaT3zAOBhHuv6iThSrPffKxtuv7sEHIZlu832O','s'),('william','$2a$07$1NSVhshtRBTxYHIXJJHLPOwtfvNUi3lfNaJK4EjnvctoQ76AMNOxW','s'),('yowen','$2a$07$QmVEdrljotwNMLvcJu2f3O9UkNsjWm/k62aNBcu9sXd0ZhnSNe5oq','t');
 /*!40000 ALTER TABLE `Users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -283,4 +277,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-18 14:05:25
+-- Dump completed on 2020-12-26 23:02:06
