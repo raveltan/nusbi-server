@@ -79,6 +79,8 @@ func main() {
 	app.Get("/teacher/schedule/:id",teacher.GetTeacherScheduleRequest)
 	app.Get("/teacher/course/:id",teacher.GetTeacherCourse)
 	app.Get("/teacher/class/:id",teacher.GetClassStudent)
+	app.Post("/teacher/student/mid",teacher.SetMidScore)
+	app.Post("/teacher/student/final",teacher.SetFinalScore)
 
 	// Start webserver
 	log.Println(app.Listen(config.Port))
