@@ -20,7 +20,7 @@ func GetSchedule(c *fiber.Ctx) error {
 	if db.GetRoleFromToken(c.Locals("user").(*jwt.Token)) != "a" {
 		return c.SendStatus(403)
 	}
-	res,err:=db.Db.Query("select date_time,schedule_id from Schedules where class_id = ? order by date_time desc",id)
+	res,err:=db.Db.Query("select distinct date_time,schedule_id from Schedules where class_id = ? order by date_time desc",id)
 	if err!=nil{
 		return c.SendStatus(500)
 	}

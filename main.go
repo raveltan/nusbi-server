@@ -81,6 +81,12 @@ func main() {
 	app.Get("/teacher/class/:id",teacher.GetClassStudent)
 	app.Post("/teacher/student/mid",teacher.SetMidScore)
 	app.Post("/teacher/student/final",teacher.SetFinalScore)
+	app.Get("/teacher/student/absence/:ClassId/:id",teacher.GetStudentAbsenceSchedule)
+	app.Get("/teacher/student/absenceData/:scheduleID/:id",teacher.GetStudentAbsence)
+	app.Post("/teacher/student/absence/",teacher.SetStudentAbsence)
+
+	// DO NOT LOGIN AS THE SAME TEACHER FROM 2 DEVICES
+	// DATA INTEGRITY MAY BE DAMAGED
 
 	// Start webserver
 	log.Println(app.Listen(config.Port))
