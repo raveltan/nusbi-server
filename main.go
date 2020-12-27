@@ -75,6 +75,7 @@ func main() {
 
 	app.Get("/student/course/:id",student.GetStudentCourse)
 	app.Get("/student/schedule/:id",student.GetStudentScheduleRequest)
+	app.Get("/student/absence/:id",student.GetStudentAbsentRecord)
 
 	app.Get("/teacher/schedule/:id",teacher.GetTeacherScheduleRequest)
 	app.Get("/teacher/course/:id",teacher.GetTeacherCourse)
